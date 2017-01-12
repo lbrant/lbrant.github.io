@@ -6,23 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lbrant.github.io">
-  <title>Nexus 5X Root后OTA升级Android Nougat的问题 | Brant的博客</title>
+  <title>Nexus 5X Root 教程 | Brant的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="###0x01.之前在Android 6.0上面将设备Root后（Root教程），手痒又忍不住通过推送的OTA升级到了Android 7.0（Nougat）,结果之前的Root全部失效，已经安装的SuperSu打开也提示没有Root权限，无奈又打算重新Root。
-###0x02.发现进入[开发者模式]-[OEM解锁]，这一项是灰色的，但是在bootloader模式下，device state提示是">
+  <meta name="description" content="因为需要安装一个WakeLock Detector的应用，需要用到Root权限，就想着把公司的Nexus 5X Root了，以便以后方便使用。Tips：CF-Auto-Root的好处是不用手动刷内核。
+0x01. 准备CF-Auto-Root1.下载地址：CF-Auto-Root-bullhead-bullhead-nexus5x.zip;如果是其他手机，请选择autoroot官网找到相应的手机型">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nexus 5X Root后OTA升级Android Nougat的问题">
-<meta property="og:url" content="https://lbrant.github.io/2017/01/12/Nexus-5X-Root续/index.html">
+<meta property="og:title" content="Nexus 5X Root 教程">
+<meta property="og:url" content="https://lbrant.github.io/2016/08/17/Nexus-5X-Root-教程/index.html">
 <meta property="og:site_name" content="Brant的博客">
-<meta property="og:description" content="###0x01.之前在Android 6.0上面将设备Root后（Root教程），手痒又忍不住通过推送的OTA升级到了Android 7.0（Nougat）,结果之前的Root全部失效，已经安装的SuperSu打开也提示没有Root权限，无奈又打算重新Root。
-###0x02.发现进入[开发者模式]-[OEM解锁]，这一项是灰色的，但是在bootloader模式下，device state提示是">
-<meta property="og:image" content="http://i.imgur.com/5SetJ0x.png">
-<meta property="og:updated_time" content="2017-01-12T08:35:38.735Z">
+<meta property="og:description" content="因为需要安装一个WakeLock Detector的应用，需要用到Root权限，就想着把公司的Nexus 5X Root了，以便以后方便使用。Tips：CF-Auto-Root的好处是不用手动刷内核。
+0x01. 准备CF-Auto-Root1.下载地址：CF-Auto-Root-bullhead-bullhead-nexus5x.zip;如果是其他手机，请选择autoroot官网找到相应的手机型">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/728306-71753a874aba64e6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/728306-ba84d75093d41845.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/728306-3dd7cf991f67487d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/728306-d2b5b8948cc80acc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/728306-e28fff6bc31113a5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/728306-c5b5ce4718b4e4e6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-01-12T11:14:31.201Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nexus 5X Root后OTA升级Android Nougat的问题">
-<meta name="twitter:description" content="###0x01.之前在Android 6.0上面将设备Root后（Root教程），手痒又忍不住通过推送的OTA升级到了Android 7.0（Nougat）,结果之前的Root全部失效，已经安装的SuperSu打开也提示没有Root权限，无奈又打算重新Root。
-###0x02.发现进入[开发者模式]-[OEM解锁]，这一项是灰色的，但是在bootloader模式下，device state提示是">
-<meta name="twitter:image" content="http://i.imgur.com/5SetJ0x.png">
+<meta name="twitter:title" content="Nexus 5X Root 教程">
+<meta name="twitter:description" content="因为需要安装一个WakeLock Detector的应用，需要用到Root权限，就想着把公司的Nexus 5X Root了，以便以后方便使用。Tips：CF-Auto-Root的好处是不用手动刷内核。
+0x01. 准备CF-Auto-Root1.下载地址：CF-Auto-Root-bullhead-bullhead-nexus5x.zip;如果是其他手机，请选择autoroot官网找到相应的手机型">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/728306-71753a874aba64e6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="Brant的博客" type="application/atom+xml">
   
@@ -174,34 +179,45 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Nexus-5X-Root续" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Nexus-5X-Root-教程" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Nexus 5X Root后OTA升级Android Nougat的问题
+      Nexus 5X Root 教程
     </h1>
   
 
         
-        <a href="/2017/01/12/Nexus-5X-Root续/" class="archive-article-date">
-  	<time datetime="2017-01-12T06:54:39.793Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-12</time>
+        <a href="/2016/08/17/Nexus-5X-Root-教程/" class="archive-article-date">
+  	<time datetime="2016-08-17T10:19:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###0x01.之前在Android 6.0上面将设备Root后（<a href="http://www.jianshu.com/p/38e48ebbed89" title="Root教程" target="_blank" rel="external">Root教程</a>），手痒又忍不住通过推送的OTA升级到了Android 7.0（Nougat）,结果之前的Root全部失效，已经安装的SuperSu打开也提示没有Root权限，无奈又打算重新Root。</p>
-<p>###0x02.发现进入[开发者模式]-[OEM解锁]，这一项是灰色的，但是在bootloader模式下，device state提示是unlock，怎么解决这个问题呢？答案是通过重新加锁的方式：<br>1). 先下载fastboot，如果一下再请略过：<br>Windows: <a href="http://www.devfiles.co/download/BFOZwOTB/fastboot-win32.zip" title="Download here!" target="_blank" rel="external">Download here</a><br>Mac: <a href="http://www.devfiles.co/download/Z0wmswob/fastboot-mac.zip" title="Download here!" target="_blank" rel="external">Download here!</a><br>Linux: <a href="http://www.devfiles.co/download/AA2h87iL/fastboot-linux.zip" title="Download here!" target="_blank" rel="external">Download here!</a><br>如果经常用这个命令，可以拷贝到android-sdk-windows\platform-tools目录下。</p>
-<p>2). 通过命令行 adb reboot bootloader，或者关机状态下，长按[电源+音量-];</p>
-<p>3). 命令行模式执行 fastboot oem lock，根据手机上提示，通过音量键选中YES，然后电源键确定后，就会自动<br>进入初次开机引导模式；</p>
-<p>4). 再次打开开发者模式，发现解锁栏已经可以勾选了。</p>
-<p>###0x03.再次Root，用之前的<a href="http://www.jianshu.com/p/38e48ebbed89" title="Root教程" target="_blank" rel="external">Root教程</a>中的工具，发现已经Root不了：<br><img src="http://i.imgur.com/5SetJ0x.png" alt="">，到官网上重新去看，<a href="https://autoroot.chainfire.eu/" title="CF" target="_blank" rel="external">CF</a>，下载了新版本，然后执行root-windows.bat，还是弹不出来那个unlock的提示界面；</p>
-<p>###0x04. 通过fastboot unlock，在bootloader模式下，执行 fastboot oem unlock，根据提示选择YES，完成后系统就又变成unlocked的状态了；</p>
-<p>###0x05. 然后下载<a href="https://dl.twrp.me/bullhead/twrp-3.0.2-2-bullhead.img" target="_blank" rel="external">twrp-3.0.2-2</a>，下载完成后拷贝到跟fastboot相同目录，然后执行 fastboot flash recovery twrp-3.0.2-2-bullhead.img；<br>注意：尽量到官网下载最新版的，我开始用的3.0.2-0的版本，刷完多次后一直都是停留在TWRP的启动页面，后面刷最新版的就可以了。</p>
+        <p>因为需要安装一个WakeLock Detector的应用，需要用到Root权限，就想着把公司的Nexus 5X Root了，以便以后方便使用。<br>Tips：CF-Auto-Root的好处是不用手动刷内核。</p>
+<h3 id="0x01-准备CF-Auto-Root"><a href="#0x01-准备CF-Auto-Root" class="headerlink" title="0x01. 准备CF-Auto-Root"></a>0x01. 准备CF-Auto-Root</h3><h4 id="1-下载地址：CF-Auto-Root-bullhead-bullhead-nexus5x-zip"><a href="#1-下载地址：CF-Auto-Root-bullhead-bullhead-nexus5x-zip" class="headerlink" title="1.下载地址：CF-Auto-Root-bullhead-bullhead-nexus5x.zip;"></a>1.下载地址：<a href="https://download.chainfire.eu/891/CF-Root1/CF-Auto-Root-bullhead-bullhead-nexus5x.zip?retrieve_file=1" target="_blank" rel="external">CF-Auto-Root-bullhead-bullhead-nexus5x.zip</a>;</h4><p>如果是其他手机，请选择<a href="https://autoroot.chainfire.eu/" target="_blank" rel="external">autoroot官网</a>找到相应的手机型号，主要针对Samsung和Nexus系列; </p>
+<h4 id="2-解压"><a href="#2-解压" class="headerlink" title="2.解压"></a>2.解压</h4><p>C:\USERS\LENOVO\DOWNLOADS\CF-AUTO-ROOT-BULLHEAD-BULLHEAD-NEXUS5X<br>│  root-linux.sh<br>│  root-mac.sh<br>│  root-windows.bat<br>│<br>├─image<br>│      CF-Auto-Root-bullhead-bullhead-nexus5x.img<br>│<br>└─tools<br>        AdbWinApi.dll<br>        AdbWinUsbApi.dll<br>        fastboot-linux<br>        fastboot-mac<br>        fastboot-windows.exe</p>
+<h3 id="0x02-下载Google-USB-drivers"><a href="#0x02-下载Google-USB-drivers" class="headerlink" title="0x02. 下载Google USB drivers"></a>0x02. 下载Google USB drivers</h3><p>从网上下载PC端连接手机的驱动，然后安装（如果PC上已经安装，请忽略这一步）；</p>
+<h3 id="0x03-手机开启允许OEM-Unlock的选项"><a href="#0x03-手机开启允许OEM-Unlock的选项" class="headerlink" title="0x03. 手机开启允许OEM Unlock的选项"></a>0x03. 手机开启允许OEM Unlock的选项</h3><ul>
+<li>Settings-&gt;Developer Options -&gt;Allow OEM Unlock;</li>
+<li><p>If you cannot find “Developer Options” under “Settings”, first go to the “Settings-&gt;About” screen, find the “Build number” entry, and tap it 7 times.</p>
+<h3 id="0x04-手机重启为Bootloader-Fastmode模式"><a href="#0x04-手机重启为Bootloader-Fastmode模式" class="headerlink" title="0x04. 手机重启为Bootloader/Fastmode模式"></a>0x04. 手机重启为Bootloader/Fastmode模式</h3><p>手机关机，然后长按[Power]+[音量-]键几秒钟，手机会以fastmode模式开机；<br><img src="http://upload-images.jianshu.io/upload_images/728306-71753a874aba64e6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="0x05-进行Root"><a href="#0x05-进行Root" class="headerlink" title="0x05. 进行Root"></a>0x05. 进行Root</h3></li>
+<li><p>手机通过USB线连上设备，双击运行前面解压过文件夹下的root-windows.bat（Mac和Linux平台执行相应命令）;<br><img src="http://upload-images.jianshu.io/upload_images/728306-ba84d75093d41845.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+</li>
+<li>按任意键继续运行，这时候手机上会弹出需要确认的操作，请根据手机屏幕上的提示进行操作，[音量+-]键进行上下选择，[Power]键进行确认；<br><img src="http://upload-images.jianshu.io/upload_images/728306-3dd7cf991f67487d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>接下来手机就会自动进行Root了，成功后会自动重启。<br><img src="http://upload-images.jianshu.io/upload_images/728306-d2b5b8948cc80acc.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><h3 id="0x06-检查Root是否成功"><a href="#0x06-检查Root是否成功" class="headerlink" title="0x06. 检查Root是否成功"></a>0x06. 检查Root是否成功</h3><ol>
+<li>手机启动后，会发现被安装了一个SuperUser的应用;<br><img src="http://upload-images.jianshu.io/upload_images/728306-e28fff6bc31113a5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+<li>安装<a href="https://play.google.com/store/apps/details?id=com.joeykrim.rootcheck&amp;hl=zh_CN" target="_blank" rel="external">RootChecker</a>，如果链接无法打开，就用Baidu|Bing搜索一下;</li>
+<li>启动RootChecker，如果出现确认授权的对话框，Root就成功了。<br><img src="http://upload-images.jianshu.io/upload_images/728306-c5b5ce4718b4e4e6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li>
+</ol>
+</li>
+</ul>
 
       
 
@@ -286,7 +302,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://lbrant.github.io/2017/01/12/Nexus-5X-Root续/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://lbrant.github.io/2016/08/17/Nexus-5X-Root-教程/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -300,9 +316,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2016/09/22/Android-Studio-Settings-Repository-Plugin-SYNC-failed-problem/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Android Studio Settings Repository Plugin SYNC failed problem
+        
+      </div>
+    </a>
   
-    <a href="/2017/01/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
+  
+    <a href="/2015/11/04/ConxtMenu高级用法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ConxtMenu高级用法</div>
       <i class="icon-circle-right"></i>
     </a>
   
