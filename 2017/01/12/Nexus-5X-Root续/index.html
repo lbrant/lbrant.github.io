@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#Nexus 5X Root后OTA升级Android Nougat的问题
+###0x01.之前在Android 6.0上面将设备Root后（Root教程），手痒又忍不住通过推送的OTA升级到了Android 7.0（Nougat）,结果之前的Root全部失效，已经安装的SuperSu打开也提示没有Root权限，无奈又打算重新Root。
+###0x02.发现进入[开发者模式]-[OEM解锁]，这一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/01/12/Nexus-5X-Root续/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#Nexus 5X Root后OTA升级Android Nougat的问题
+###0x01.之前在Android 6.0上面将设备Root后（Root教程），手痒又忍不住通过推送的OTA升级到了Android 7.0（Nougat）,结果之前的Root全部失效，已经安装的SuperSu打开也提示没有Root权限，无奈又打算重新Root。
+###0x02.发现进入[开发者模式]-[OEM解锁]，这一">
+<meta property="og:image" content="http://i.imgur.com/5SetJ0x.png">
+<meta property="og:updated_time" content="2016-10-24T10:36:27.071Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="#Nexus 5X Root后OTA升级Android Nougat的问题
+###0x01.之前在Android 6.0上面将设备Root后（Root教程），手痒又忍不住通过推送的OTA升级到了Android 7.0（Nougat）,结果之前的Root全部失效，已经安装的SuperSu打开也提示没有Root权限，无奈又打算重新Root。
+###0x02.发现进入[开发者模式]-[OEM解锁]，这一">
+<meta name="twitter:image" content="http://i.imgur.com/5SetJ0x.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Nexus-5X-Root续" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/01/12/Nexus-5X-Root续/" class="article-date">
+  <time datetime="2017-01-12T06:54:39.793Z" itemprop="datePublished">2017-01-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#Nexus 5X Root后OTA升级Android Nougat的问题</p>
+<p>###0x01.之前在Android 6.0上面将设备Root后（<a href="http://www.jianshu.com/p/38e48ebbed89" title="Root教程" target="_blank" rel="external">Root教程</a>），手痒又忍不住通过推送的OTA升级到了Android 7.0（Nougat）,结果之前的Root全部失效，已经安装的SuperSu打开也提示没有Root权限，无奈又打算重新Root。</p>
+<p>###0x02.发现进入[开发者模式]-[OEM解锁]，这一项是灰色的，但是在bootloader模式下，device state提示是unlock，怎么解决这个问题呢？答案是通过重新加锁的方式：<br>1). 先下载fastboot，如果一下再请略过：<br>Windows: <a href="http://www.devfiles.co/download/BFOZwOTB/fastboot-win32.zip" title="Download here!" target="_blank" rel="external">Download here</a><br>Mac: <a href="http://www.devfiles.co/download/Z0wmswob/fastboot-mac.zip" title="Download here!" target="_blank" rel="external">Download here!</a><br>Linux: <a href="http://www.devfiles.co/download/AA2h87iL/fastboot-linux.zip" title="Download here!" target="_blank" rel="external">Download here!</a><br>如果经常用这个命令，可以拷贝到android-sdk-windows\platform-tools目录下。</p>
+<p>2). 通过命令行 adb reboot bootloader，或者关机状态下，长按[电源+音量-];</p>
+<p>3). 命令行模式执行 fastboot oem lock，根据手机上提示，通过音量键选中YES，然后电源键确定后，就会自动<br>进入初次开机引导模式；</p>
+<p>4). 再次打开开发者模式，发现解锁栏已经可以勾选了。</p>
+<p>###0x03.再次Root，用之前的<a href="http://www.jianshu.com/p/38e48ebbed89" title="Root教程" target="_blank" rel="external">Root教程</a>中的工具，发现已经Root不了：<br><img src="http://i.imgur.com/5SetJ0x.png" alt="">，到官网上重新去看，<a href="https://autoroot.chainfire.eu/" title="CF" target="_blank" rel="external">CF</a>，下载了新版本，然后执行root-windows.bat，还是弹不出来那个unlock的提示界面；</p>
+<p>###0x04. 通过fastboot unlock，在bootloader模式下，执行 fastboot oem unlock，根据提示选择YES，完成后系统就又变成unlocked的状态了；</p>
+<p>###0x05. 然后下载<a href="https://dl.twrp.me/bullhead/twrp-3.0.2-2-bullhead.img" target="_blank" rel="external">twrp-3.0.2-2</a>，下载完成后拷贝到跟fastboot相同目录，然后执行 fastboot flash recovery twrp-3.0.2-2-bullhead.img；<br>注意：尽量到官网下载最新版的，我开始用的3.0.2-0的版本，刷完多次后一直都是停留在TWRP的启动页面，后面刷最新版的就可以了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/01/12/Nexus-5X-Root续/" data-id="cixu0t4on0001m8qa6r1eypws" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/01/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/01/12/Nexus-5X-Root续/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/01/12/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
