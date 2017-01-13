@@ -61,8 +61,6 @@
 	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
-				<li><a href="/categories">分类</a></li>
-	        
 				<li><a href="/archives/">归档</a></li>
 	        
 			</ul>
@@ -127,8 +125,6 @@
 			
 				
 			
-				
-			
 			
 			
 			<nav class="header-nav">
@@ -151,13 +147,11 @@
 				<ul style="width: 70%">
 				
 				
-					<li style="width: 25%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
 		        
-					<li style="width: 25%"><a href="/categories">分类</a></li>
-		        
-					<li style="width: 25%"><a href="/archives/">归档</a></li>
+					<li style="width: 33.333333333333336%"><a href="/archives/">归档</a></li>
 		        
 				</ul>
 			</nav>
@@ -173,64 +167,6 @@
           </div>
           <div id="js-content" class="content-ll">
             
-  
-    <article id="post-Nexus-5X-Root续" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/12/Nexus-5X-Root续/">Nexus 5X Root后OTA升级Android Nougat的问题</a>
-    </h1>
-  
-
-        
-        <a href="/2017/01/12/Nexus-5X-Root续/" class="archive-article-date">
-  	<time datetime="2017-01-12T06:54:39.793Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>###0x01.之前在Android 6.0上面将设备Root后（<a href="http://www.jianshu.com/p/38e48ebbed89" title="Root教程" target="_blank" rel="external">Root教程</a>），手痒又忍不住通过推送的OTA升级到了Android 7.0（Nougat）,结果之前的Root全部失效，已经安装的SuperSu打开也提示没有Root权限，无奈又打算重新Root。</p>
-<p>###0x02.发现进入[开发者模式]-[OEM解锁]，这一项是灰色的，但是在bootloader模式下，device state提示是unlock，怎么解决这个问题呢？答案是通过重新加锁的方式：<br>1). 先下载fastboot，如果一下再请略过：<br>Windows: <a href="http://www.devfiles.co/download/BFOZwOTB/fastboot-win32.zip" title="Download here!" target="_blank" rel="external">Download here</a><br>Mac: <a href="http://www.devfiles.co/download/Z0wmswob/fastboot-mac.zip" title="Download here!" target="_blank" rel="external">Download here!</a><br>Linux: <a href="http://www.devfiles.co/download/AA2h87iL/fastboot-linux.zip" title="Download here!" target="_blank" rel="external">Download here!</a><br>如果经常用这个命令，可以拷贝到android-sdk-windows\platform-tools目录下。</p>
-<p>2). 通过命令行 adb reboot bootloader，或者关机状态下，长按[电源+音量-];</p>
-<p>3). 命令行模式执行 fastboot oem lock，根据手机上提示，通过音量键选中YES，然后电源键确定后，就会自动<br>进入初次开机引导模式；</p>
-<p>4). 再次打开开发者模式，发现解锁栏已经可以勾选了。</p>
-<p>###0x03.再次Root，用之前的<a href="http://www.jianshu.com/p/38e48ebbed89" title="Root教程" target="_blank" rel="external">Root教程</a>中的工具，发现已经Root不了：<br><img src="http://i.imgur.com/5SetJ0x.png" alt="">，到官网上重新去看，<a href="https://autoroot.chainfire.eu/" title="CF" target="_blank" rel="external">CF</a>，下载了新版本，然后执行root-windows.bat，还是弹不出来那个unlock的提示界面；</p>
-<p>###0x04. 通过fastboot unlock，在bootloader模式下，执行 fastboot oem unlock，根据提示选择YES，完成后系统就又变成unlocked的状态了；</p>
-<p>###0x05. 然后下载<a href="https://dl.twrp.me/bullhead/twrp-3.0.2-2-bullhead.img" target="_blank" rel="external">twrp-3.0.2-2</a>，下载完成后拷贝到跟fastboot相同目录，然后执行 fastboot flash recovery twrp-3.0.2-2-bullhead.img；<br>注意：尽量到官网下载最新版的，我开始用的3.0.2-0的版本，刷完多次后一直都是停留在TWRP的启动页面，后面刷最新版的就可以了。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/01/12/Nexus-5X-Root续/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
   
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -269,6 +205,25 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">tags1</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">tags2</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -374,6 +329,86 @@
 
 
   
+    <article id="post-Nexus-5X-Root续" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/08/18/Nexus-5X-Root续/">Nexus 5X Root后OTA升级Android Nougat的问题</a>
+    </h1>
+  
+
+        
+        <a href="/2016/08/18/Nexus-5X-Root续/" class="archive-article-date">
+  	<time datetime="2016-08-18T10:19:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###0x01.之前在Android 6.0上面将设备Root后（<a href="http://www.jianshu.com/p/38e48ebbed89" title="Root教程" target="_blank" rel="external">Root教程</a>），手痒又忍不住通过推送的OTA升级到了Android 7.0（Nougat）,结果之前的Root全部失效，已经安装的SuperSu打开也提示没有Root权限，无奈又打算重新Root。</p>
+<p>###0x02.发现进入[开发者模式]-[OEM解锁]，这一项是灰色的，但是在bootloader模式下，device state提示是unlock，怎么解决这个问题呢？答案是通过重新加锁的方式：<br>1). 先下载fastboot，如果一下再请略过：<br>Windows: <a href="http://www.devfiles.co/download/BFOZwOTB/fastboot-win32.zip" title="Download here!" target="_blank" rel="external">Download here</a><br>Mac: <a href="http://www.devfiles.co/download/Z0wmswob/fastboot-mac.zip" title="Download here!" target="_blank" rel="external">Download here!</a><br>Linux: <a href="http://www.devfiles.co/download/AA2h87iL/fastboot-linux.zip" title="Download here!" target="_blank" rel="external">Download here!</a><br>如果经常用这个命令，可以拷贝到android-sdk-windows\platform-tools目录下。</p>
+<p>2). 通过命令行 adb reboot bootloader，或者关机状态下，长按[电源+音量-];</p>
+<p>3). 命令行模式执行 fastboot oem lock，根据手机上提示，通过音量键选中YES，然后电源键确定后，就会自动<br>进入初次开机引导模式；</p>
+<p>4). 再次打开开发者模式，发现解锁栏已经可以勾选了。</p>
+<p>###0x03.再次Root，用之前的<a href="http://www.jianshu.com/p/38e48ebbed89" title="Root教程" target="_blank" rel="external">Root教程</a>中的工具，发现已经Root不了：<br><img src="http://i.imgur.com/5SetJ0x.png" alt="">，到官网上重新去看，<a href="https://autoroot.chainfire.eu/" title="CF" target="_blank" rel="external">CF</a>，下载了新版本，然后执行root-windows.bat，还是弹不出来那个unlock的提示界面；</p>
+<p>###0x04. 通过fastboot unlock，在bootloader模式下，执行 fastboot oem unlock，根据提示选择YES，完成后系统就又变成unlocked的状态了；</p>
+<p>###0x05. 然后下载<a href="https://dl.twrp.me/bullhead/twrp-3.0.2-2-bullhead.img" target="_blank" rel="external">twrp-3.0.2-2</a>，下载完成后拷贝到跟fastboot相同目录，然后执行 fastboot flash recovery twrp-3.0.2-2-bullhead.img；<br>注意：尽量到官网下载最新版的，我开始用的3.0.2-0的版本，刷完多次后一直都是停留在TWRP的启动页面，后面刷最新版的就可以了。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Android,Nexus,Root</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2016/08/18/Nexus-5X-Root续/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+  
     <article id="post-Nexus-5X-Root-教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -421,7 +456,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Android,Nexus,Root</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
@@ -501,6 +558,17 @@
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
@@ -552,7 +620,7 @@
 		open_in_new: false,
 		root: "/",
 		innerArchive: true,
-		showTags: false
+		showTags: true
 	}
 </script>
 
@@ -612,6 +680,22 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Settings Repository Plugin</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Android,Nexus,Root</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">tags1</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">tags2</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>

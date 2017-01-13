@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lbrant.github.io/"/>
-  <updated>2017-01-12T08:35:38.735Z</updated>
+  <updated>2017-01-13T05:52:35.187Z</updated>
   <id>https://lbrant.github.io/</id>
   
   <author>
@@ -16,37 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Nexus 5X Root后OTA升级Android Nougat的问题</title>
-    <link href="https://lbrant.github.io/2017/01/12/Nexus-5X-Root%E7%BB%AD/"/>
-    <id>https://lbrant.github.io/2017/01/12/Nexus-5X-Root续/</id>
-    <published>2017-01-12T06:54:39.793Z</published>
-    <updated>2017-01-12T08:35:38.735Z</updated>
-    
-    <content type="html"><![CDATA[<p>###0x01.之前在Android 6.0上面将设备Root后（<a href="http://www.jianshu.com/p/38e48ebbed89" title="Root教程" target="_blank" rel="external">Root教程</a>），手痒又忍不住通过推送的OTA升级到了Android 7.0（Nougat）,结果之前的Root全部失效，已经安装的SuperSu打开也提示没有Root权限，无奈又打算重新Root。</p>
-<p>###0x02.发现进入[开发者模式]-[OEM解锁]，这一项是灰色的，但是在bootloader模式下，device state提示是unlock，怎么解决这个问题呢？答案是通过重新加锁的方式：<br>1). 先下载fastboot，如果一下再请略过：<br>Windows: <a href="http://www.devfiles.co/download/BFOZwOTB/fastboot-win32.zip" title="Download here!" target="_blank" rel="external">Download here</a><br>Mac: <a href="http://www.devfiles.co/download/Z0wmswob/fastboot-mac.zip" title="Download here!" target="_blank" rel="external">Download here!</a><br>Linux: <a href="http://www.devfiles.co/download/AA2h87iL/fastboot-linux.zip" title="Download here!" target="_blank" rel="external">Download here!</a><br>如果经常用这个命令，可以拷贝到android-sdk-windows\platform-tools目录下。</p>
-<p>2). 通过命令行 adb reboot bootloader，或者关机状态下，长按[电源+音量-];</p>
-<p>3). 命令行模式执行 fastboot oem lock，根据手机上提示，通过音量键选中YES，然后电源键确定后，就会自动<br>进入初次开机引导模式；</p>
-<p>4). 再次打开开发者模式，发现解锁栏已经可以勾选了。</p>
-<p>###0x03.再次Root，用之前的<a href="http://www.jianshu.com/p/38e48ebbed89" title="Root教程" target="_blank" rel="external">Root教程</a>中的工具，发现已经Root不了：<br><img src="http://i.imgur.com/5SetJ0x.png" alt="">，到官网上重新去看，<a href="https://autoroot.chainfire.eu/" title="CF" target="_blank" rel="external">CF</a>，下载了新版本，然后执行root-windows.bat，还是弹不出来那个unlock的提示界面；</p>
-<p>###0x04. 通过fastboot unlock，在bootloader模式下，执行 fastboot oem unlock，根据提示选择YES，完成后系统就又变成unlocked的状态了；</p>
-<p>###0x05. 然后下载<a href="https://dl.twrp.me/bullhead/twrp-3.0.2-2-bullhead.img" target="_blank" rel="external">twrp-3.0.2-2</a>，下载完成后拷贝到跟fastboot相同目录，然后执行 fastboot flash recovery twrp-3.0.2-2-bullhead.img；<br>注意：尽量到官网下载最新版的，我开始用的3.0.2-0的版本，刷完多次后一直都是停留在TWRP的启动页面，后面刷最新版的就可以了。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;###0x01.之前在Android 6.0上面将设备Root后（&lt;a href=&quot;http://www.jianshu.com/p/38e48ebbed89&quot; title=&quot;Root教程&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Root教程&lt;/a&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
     <link href="https://lbrant.github.io/2017/01/12/hello-world/"/>
     <id>https://lbrant.github.io/2017/01/12/hello-world/</id>
     <published>2017-01-12T06:45:57.436Z</published>
-    <updated>2017-01-12T06:45:57.436Z</updated>
+    <updated>2017-01-13T05:52:35.187Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
@@ -65,6 +39,12 @@
     
     </summary>
     
+    
+      <category term="tags1" scheme="https://lbrant.github.io/tags/tags1/"/>
+    
+      <category term="tags2" scheme="https://lbrant.github.io/tags/tags2/"/>
+    
+      <category term="随笔" scheme="https://lbrant.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
@@ -105,11 +85,41 @@
   </entry>
   
   <entry>
+    <title>Nexus 5X Root后OTA升级Android Nougat的问题</title>
+    <link href="https://lbrant.github.io/2016/08/18/Nexus-5X-Root%E7%BB%AD/"/>
+    <id>https://lbrant.github.io/2016/08/18/Nexus-5X-Root续/</id>
+    <published>2016-08-18T10:19:51.000Z</published>
+    <updated>2017-01-13T05:09:14.927Z</updated>
+    
+    <content type="html"><![CDATA[<p>###0x01.之前在Android 6.0上面将设备Root后（<a href="http://www.jianshu.com/p/38e48ebbed89" title="Root教程" target="_blank" rel="external">Root教程</a>），手痒又忍不住通过推送的OTA升级到了Android 7.0（Nougat）,结果之前的Root全部失效，已经安装的SuperSu打开也提示没有Root权限，无奈又打算重新Root。</p>
+<p>###0x02.发现进入[开发者模式]-[OEM解锁]，这一项是灰色的，但是在bootloader模式下，device state提示是unlock，怎么解决这个问题呢？答案是通过重新加锁的方式：<br>1). 先下载fastboot，如果一下再请略过：<br>Windows: <a href="http://www.devfiles.co/download/BFOZwOTB/fastboot-win32.zip" title="Download here!" target="_blank" rel="external">Download here</a><br>Mac: <a href="http://www.devfiles.co/download/Z0wmswob/fastboot-mac.zip" title="Download here!" target="_blank" rel="external">Download here!</a><br>Linux: <a href="http://www.devfiles.co/download/AA2h87iL/fastboot-linux.zip" title="Download here!" target="_blank" rel="external">Download here!</a><br>如果经常用这个命令，可以拷贝到android-sdk-windows\platform-tools目录下。</p>
+<p>2). 通过命令行 adb reboot bootloader，或者关机状态下，长按[电源+音量-];</p>
+<p>3). 命令行模式执行 fastboot oem lock，根据手机上提示，通过音量键选中YES，然后电源键确定后，就会自动<br>进入初次开机引导模式；</p>
+<p>4). 再次打开开发者模式，发现解锁栏已经可以勾选了。</p>
+<p>###0x03.再次Root，用之前的<a href="http://www.jianshu.com/p/38e48ebbed89" title="Root教程" target="_blank" rel="external">Root教程</a>中的工具，发现已经Root不了：<br><img src="http://i.imgur.com/5SetJ0x.png" alt="">，到官网上重新去看，<a href="https://autoroot.chainfire.eu/" title="CF" target="_blank" rel="external">CF</a>，下载了新版本，然后执行root-windows.bat，还是弹不出来那个unlock的提示界面；</p>
+<p>###0x04. 通过fastboot unlock，在bootloader模式下，执行 fastboot oem unlock，根据提示选择YES，完成后系统就又变成unlocked的状态了；</p>
+<p>###0x05. 然后下载<a href="https://dl.twrp.me/bullhead/twrp-3.0.2-2-bullhead.img" target="_blank" rel="external">twrp-3.0.2-2</a>，下载完成后拷贝到跟fastboot相同目录，然后执行 fastboot flash recovery twrp-3.0.2-2-bullhead.img；<br>注意：尽量到官网下载最新版的，我开始用的3.0.2-0的版本，刷完多次后一直都是停留在TWRP的启动页面，后面刷最新版的就可以了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###0x01.之前在Android 6.0上面将设备Root后（&lt;a href=&quot;http://www.jianshu.com/p/38e48ebbed89&quot; title=&quot;Root教程&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Root教程&lt;/a&gt;
+    
+    </summary>
+    
+      <category term="Android" scheme="https://lbrant.github.io/categories/Android/"/>
+    
+    
+      <category term="Android,Nexus,Root" scheme="https://lbrant.github.io/tags/Android-Nexus-Root/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Nexus 5X Root 教程</title>
     <link href="https://lbrant.github.io/2016/08/17/Nexus-5X-Root-%E6%95%99%E7%A8%8B/"/>
     <id>https://lbrant.github.io/2016/08/17/Nexus-5X-Root-教程/</id>
     <published>2016-08-17T10:19:51.000Z</published>
-    <updated>2017-01-12T11:14:31.201Z</updated>
+    <updated>2017-01-13T05:08:44.986Z</updated>
     
     <content type="html"><![CDATA[<p>因为需要安装一个WakeLock Detector的应用，需要用到Root权限，就想着把公司的Nexus 5X Root了，以便以后方便使用。<br>Tips：CF-Auto-Root的好处是不用手动刷内核。</p>
 <h3 id="0x01-准备CF-Auto-Root"><a href="#0x01-准备CF-Auto-Root" class="headerlink" title="0x01. 准备CF-Auto-Root"></a>0x01. 准备CF-Auto-Root</h3><h4 id="1-下载地址：CF-Auto-Root-bullhead-bullhead-nexus5x-zip"><a href="#1-下载地址：CF-Auto-Root-bullhead-bullhead-nexus5x-zip" class="headerlink" title="1.下载地址：CF-Auto-Root-bullhead-bullhead-nexus5x.zip;"></a>1.下载地址：<a href="https://download.chainfire.eu/891/CF-Root1/CF-Auto-Root-bullhead-bullhead-nexus5x.zip?retrieve_file=1" target="_blank" rel="external">CF-Auto-Root-bullhead-bullhead-nexus5x.zip</a>;</h4><p>如果是其他手机，请选择<a href="https://autoroot.chainfire.eu/" target="_blank" rel="external">autoroot官网</a>找到相应的手机型号，主要针对Samsung和Nexus系列; </p>
@@ -139,6 +149,10 @@
     
     </summary>
     
+      <category term="Android" scheme="https://lbrant.github.io/categories/Android/"/>
+    
+    
+      <category term="Android,Nexus,Root" scheme="https://lbrant.github.io/tags/Android-Nexus-Root/"/>
     
   </entry>
   
@@ -147,7 +161,7 @@
     <link href="https://lbrant.github.io/2015/11/04/ConxtMenu%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/"/>
     <id>https://lbrant.github.io/2015/11/04/ConxtMenu高级用法/</id>
     <published>2015-11-04T05:31:00.000Z</published>
-    <updated>2017-01-12T11:07:52.664Z</updated>
+    <updated>2017-01-13T05:08:06.736Z</updated>
     
     <content type="html"><![CDATA[<p>##背景<br>我们经常在列表的页面中，点击列表中的行，一般进入详情页面，长按列表中一行，会弹出一个菜单，包含了对某一行的操作（编辑、删除等等），也知道通常的用法：</p>
 <ul>
@@ -187,6 +201,8 @@
 &lt;li&gt;0x01. 在Activity中注册需要上下文菜单的View：&lt;br&gt; &lt;code
     
     </summary>
+    
+      <category term="Android" scheme="https://lbrant.github.io/categories/Android/"/>
     
     
   </entry>

@@ -4,6 +4,85 @@
 
     
   <url>
+    <loc>https://lbrant.github.io/2017/01/12/hello-world/</loc>
+    <lastmod>2017-01-13T05:52:35.187Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2017-01-12T06:45:57.436Z</pubTime>
+        
+        <tag>tags1</tag>
+         
+        <tag>tags2</tag>
+         
+        <tag>随笔</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lbrant.github.io/2016/08/18/Nexus-5X-Root%E7%BB%AD/</loc>
+    <lastmod>2017-01-13T05:09:14.927Z</lastmod>
+    <data>
+        <display>
+        <title>Nexus 5X Root后OTA升级Android Nougat的问题</title>
+        <pubTime>2016-08-18T10:19:51.000Z</pubTime>
+        
+        <tag>Android,Nexus,Root</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://lbrant.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lbrant.github.io/2016/08/17/Nexus-5X-Root-%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2017-01-13T05:08:44.986Z</lastmod>
+    <data>
+        <display>
+        <title>Nexus 5X Root 教程</title>
+        <pubTime>2016-08-17T10:19:51.000Z</pubTime>
+        
+        <tag>Android,Nexus,Root</tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="https://lbrant.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://lbrant.github.io/2015/11/04/ConxtMenu%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</loc>
+    <lastmod>2017-01-13T05:08:06.736Z</lastmod>
+    <data>
+        <display>
+        <title>ConxtMenu高级用法</title>
+        <pubTime>2015-11-04T05:31:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Android" url="https://lbrant.github.io/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://lbrant.github.io/2016/09/22/Android-Studio-Settings-Repository-Plugin-SYNC-failed-problem/</loc>
     <lastmod>2017-01-13T04:54:39.875Z</lastmod>
     <data>
@@ -24,64 +103,4 @@
 
     
     
-    
-  <url>
-    <loc>https://lbrant.github.io/2016/08/17/Nexus-5X-Root-%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2017-01-12T11:14:31.201Z</lastmod>
-    <data>
-        <display>
-        <title>Nexus 5X Root 教程</title>
-        <pubTime>2016-08-17T10:19:51.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lbrant.github.io/2015/11/04/ConxtMenu%E9%AB%98%E7%BA%A7%E7%94%A8%E6%B3%95/</loc>
-    <lastmod>2017-01-12T11:07:52.664Z</lastmod>
-    <data>
-        <display>
-        <title>ConxtMenu高级用法</title>
-        <pubTime>2015-11-04T05:31:00.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lbrant.github.io/2017/01/12/Nexus-5X-Root%E7%BB%AD/</loc>
-    <lastmod>2017-01-12T08:35:38.735Z</lastmod>
-    <data>
-        <display>
-        <title>Nexus 5X Root后OTA升级Android Nougat的问题</title>
-        <pubTime>2017-01-12T06:54:39.793Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://lbrant.github.io/2017/01/12/hello-world/</loc>
-    <lastmod>2017-01-12T06:45:57.436Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2017-01-12T06:45:57.436Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
 </urlset>
