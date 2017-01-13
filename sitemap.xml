@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://lbrant.github.io/2016/09/22/Android-Studio-Settings-Repository-Plugin-SYNC-failed-problem/</loc>
+    
+    <lastmod>2017-01-13T04:54:39.875Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://lbrant.github.io/categories/index.html</loc>
+    
+    <lastmod>2017-01-13T04:40:36.540Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://lbrant.github.io//404.html</loc>
     
-    <lastmod>2017-01-13T03:51:27.424Z</lastmod>
+    <lastmod>2017-01-13T03:58:33.881Z</lastmod>
     
   </url>
   
@@ -12,13 +26,6 @@
     <loc>https://lbrant.github.io/2016/08/17/Nexus-5X-Root-%E6%95%99%E7%A8%8B/</loc>
     
     <lastmod>2017-01-12T11:14:31.201Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://lbrant.github.io/2016/09/22/Android-Studio-Settings-Repository-Plugin-SYNC-failed-problem/</loc>
-    
-    <lastmod>2017-01-12T11:10:59.183Z</lastmod>
     
   </url>
   
