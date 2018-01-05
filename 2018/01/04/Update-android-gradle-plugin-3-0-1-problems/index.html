@@ -6,23 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://lbrant.github.io">
-  <title>Nexus 5X Root后OTA升级Android Nougat的问题 | Brant的博客</title>
+  <title>Update android gradle plugin 3.0.1 problems | Brant的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="###0x01.之前在Android 6.0上面将设备Root后（Root教程），手痒又忍不住通过推送的OTA升级到了Android 7.0（Nougat）,结果之前的Root全部失效，已经安装的SuperSu打开也提示没有Root权限，无奈又打算重新Root。
-###0x02.发现进入[开发者模式]-[OEM解锁]，这一项是灰色的，但是在bootloader模式下，device state提示是">
+  <meta name="description" content="#0x0.Pre网上找到很多答案，但是很多都不能用，也没有声明环境，浪费了很多时间，而Gradle这货变化太快了，经常上个版本的方法、字段到下个版本就不能用了，所以先声明一下本文的环境和版本号，以免日后时间长，方法失效。
+
+Android Studio:3.0.1Android Gradle Plugin: 3.0.1Gradle Wapper: gradle-4.1-allStudio Embe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nexus 5X Root后OTA升级Android Nougat的问题">
-<meta property="og:url" content="https://lbrant.github.io/2016/08/18/Nexus-5X-Root续/index.html">
+<meta property="og:title" content="Update android gradle plugin 3.0.1 problems">
+<meta property="og:url" content="https://lbrant.github.io/2018/01/04/Update-android-gradle-plugin-3-0-1-problems/index.html">
 <meta property="og:site_name" content="Brant的博客">
-<meta property="og:description" content="###0x01.之前在Android 6.0上面将设备Root后（Root教程），手痒又忍不住通过推送的OTA升级到了Android 7.0（Nougat）,结果之前的Root全部失效，已经安装的SuperSu打开也提示没有Root权限，无奈又打算重新Root。
-###0x02.发现进入[开发者模式]-[OEM解锁]，这一项是灰色的，但是在bootloader模式下，device state提示是">
-<meta property="og:image" content="http://i.imgur.com/5SetJ0x.png">
-<meta property="og:updated_time" content="2017-01-13T05:09:14.927Z">
+<meta property="og:description" content="#0x0.Pre网上找到很多答案，但是很多都不能用，也没有声明环境，浪费了很多时间，而Gradle这货变化太快了，经常上个版本的方法、字段到下个版本就不能用了，所以先声明一下本文的环境和版本号，以免日后时间长，方法失效。
+
+Android Studio:3.0.1Android Gradle Plugin: 3.0.1Gradle Wapper: gradle-4.1-allStudio Embe">
+<meta property="og:image" content="https://i.imgur.com/w1L3HuC.png">
+<meta property="og:updated_time" content="2018-01-05T13:48:49.400Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nexus 5X Root后OTA升级Android Nougat的问题">
-<meta name="twitter:description" content="###0x01.之前在Android 6.0上面将设备Root后（Root教程），手痒又忍不住通过推送的OTA升级到了Android 7.0（Nougat）,结果之前的Root全部失效，已经安装的SuperSu打开也提示没有Root权限，无奈又打算重新Root。
-###0x02.发现进入[开发者模式]-[OEM解锁]，这一项是灰色的，但是在bootloader模式下，device state提示是">
-<meta name="twitter:image" content="http://i.imgur.com/5SetJ0x.png">
+<meta name="twitter:title" content="Update android gradle plugin 3.0.1 problems">
+<meta name="twitter:description" content="#0x0.Pre网上找到很多答案，但是很多都不能用，也没有声明环境，浪费了很多时间，而Gradle这货变化太快了，经常上个版本的方法、字段到下个版本就不能用了，所以先声明一下本文的环境和版本号，以免日后时间长，方法失效。
+
+Android Studio:3.0.1Android Gradle Plugin: 3.0.1Gradle Wapper: gradle-4.1-allStudio Embe">
+<meta name="twitter:image" content="https://i.imgur.com/w1L3HuC.png">
   
     <link rel="alternative" href="/atom.xml" title="Brant的博客" type="application/atom+xml">
   
@@ -178,34 +181,82 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Nexus-5X-Root续" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Update-android-gradle-plugin-3-0-1-problems" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Nexus 5X Root后OTA升级Android Nougat的问题
+      Update android gradle plugin 3.0.1 problems
     </h1>
   
 
         
-        <a href="/2016/08/18/Nexus-5X-Root续/" class="archive-article-date">
-  	<time datetime="2016-08-18T10:19:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-18</time>
+        <a href="/2018/01/04/Update-android-gradle-plugin-3-0-1-problems/" class="archive-article-date">
+  	<time datetime="2018-01-04T10:15:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###0x01.之前在Android 6.0上面将设备Root后（<a href="http://www.jianshu.com/p/38e48ebbed89" title="Root教程" target="_blank" rel="external">Root教程</a>），手痒又忍不住通过推送的OTA升级到了Android 7.0（Nougat）,结果之前的Root全部失效，已经安装的SuperSu打开也提示没有Root权限，无奈又打算重新Root。</p>
-<p>###0x02.发现进入[开发者模式]-[OEM解锁]，这一项是灰色的，但是在bootloader模式下，device state提示是unlock，怎么解决这个问题呢？答案是通过重新加锁的方式：<br>1). 先下载fastboot，如果一下再请略过：<br>Windows: <a href="http://www.devfiles.co/download/BFOZwOTB/fastboot-win32.zip" title="Download here!" target="_blank" rel="external">Download here</a><br>Mac: <a href="http://www.devfiles.co/download/Z0wmswob/fastboot-mac.zip" title="Download here!" target="_blank" rel="external">Download here!</a><br>Linux: <a href="http://www.devfiles.co/download/AA2h87iL/fastboot-linux.zip" title="Download here!" target="_blank" rel="external">Download here!</a><br>如果经常用这个命令，可以拷贝到android-sdk-windows\platform-tools目录下。</p>
-<p>2). 通过命令行 adb reboot bootloader，或者关机状态下，长按[电源+音量-];</p>
-<p>3). 命令行模式执行 fastboot oem lock，根据手机上提示，通过音量键选中YES，然后电源键确定后，就会自动<br>进入初次开机引导模式；</p>
-<p>4). 再次打开开发者模式，发现解锁栏已经可以勾选了。</p>
-<p>###0x03.再次Root，用之前的<a href="http://www.jianshu.com/p/38e48ebbed89" title="Root教程" target="_blank" rel="external">Root教程</a>中的工具，发现已经Root不了：<br><img src="http://i.imgur.com/5SetJ0x.png" alt="">，到官网上重新去看，<a href="https://autoroot.chainfire.eu/" title="CF" target="_blank" rel="external">CF</a>，下载了新版本，然后执行root-windows.bat，还是弹不出来那个unlock的提示界面；</p>
-<p>###0x04. 通过fastboot unlock，在bootloader模式下，执行 fastboot oem unlock，根据提示选择YES，完成后系统就又变成unlocked的状态了；</p>
-<p>###0x05. 然后下载<a href="https://dl.twrp.me/bullhead/twrp-3.0.2-2-bullhead.img" target="_blank" rel="external">twrp-3.0.2-2</a>，下载完成后拷贝到跟fastboot相同目录，然后执行 fastboot flash recovery twrp-3.0.2-2-bullhead.img；<br>注意：尽量到官网下载最新版的，我开始用的3.0.2-0的版本，刷完多次后一直都是停留在TWRP的启动页面，后面刷最新版的就可以了。</p>
+        <p>#0x0.Pre<br>网上找到很多答案，但是很多都不能用，也没有声明环境，浪费了很多时间，而Gradle这货变化太快了，经常上个版本的方法、字段到下个版本就不能用了，所以先声明一下本文的环境和版本号，以免日后时间长，方法失效。</p>
+<blockquote>
+<p>Android Studio:3.0.1<br>Android Gradle Plugin: 3.0.1<br>Gradle Wapper: gradle-4.1-all<br>Studio Embedded JDK：openjdk version “1.8.0_152-release”</p>
+</blockquote>
+<p>最近手贱升级了Android Studio到3.0.1，结果就踏上踩坑之路，之前的打包脚本都没法用，并且jre用的内嵌的1.8，而我本机装的是1.7，于是乎gradlew的命令没法用，提示：</p>
+<blockquote>
+<p>java.lang.UnsupportedClassVersionError: com/android/build/gradle/AppPlugin : Unsupported major.minor version 52.0</p>
+</blockquote>
+<p>这个问题的原因是，系统环境变量中的Java指向的还是1.7，而Android Gradle Plugin应该是1.8编译出来的，生成的class文件中，Java版本号是52.0（1.7是51.0）。</p>
+<p>#0x1. 解决JRE版本问题<br>首先想到更改环境变量，系统变量中新增JAVA_HOME_8，内容为D:\Android\android-studio\jre（本人AndroidStudio默认内嵌的1.8的JRE），命令行中运行java -version仍然显示：</p>
+<blockquote>
+<p>java version “1.7.0_60”<br>Java(TM) SE Runtime Environment (build 1.7.0_60-b19)<br>Java HotSpot(TM) 64-Bit Server VM (build 24.60-b09, mixed mode)</p>
+</blockquote>
+<p>然后查找Java路径where java：</p>
+<blockquote>
+<p>C:\Windows\System32\java.exe<br>C:\Program Files\Java\jdk1.7.0_60\bin\java.exe<br>C:\Program Files\Java\jdk1.7.0_60\jre\bin\java.exe</p>
+</blockquote>
+<p>应该是安装JDK时往系统目录复制了java.exe文件，避免引起其他问题，不敢轻易改动，就想其他办法，结果还真有可以更改Java版本的地方，在应用Root目录的gradle.properties中添加如下配置即可：<br>//请配置你的地址</p>
+<blockquote>
+<p>org.gradle.java.home=D:/Android/android-studio/jre</p>
+</blockquote>
+<p>默认还可以更改其他jvm参数：</p>
+<blockquote>
+<p>org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m<br>-XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8</p>
+</blockquote>
+<p>gradlew.bat中会查找到对应的JAVA_HOME，此问题顺利解决，我打包需要1.7，可以指定编译版本，放到对应Module的build.gradle的android节点中：</p>
+<pre><code>compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+</code></pre><p>#0x2.本地AAR文件不再支持</p>
+<blockquote>
+<p>While using this plugin with Android Studio, dependencies on local AAR files are not yet supported.<br><a href="https://developer.android.com/studio/build/gradle-plugin-3-0-0.html#known_issues" target="_blank" rel="external">gradle-plugin-3-0-0.html#known_issues</a></p>
+</blockquote>
+<p>因为我的项目是分成多个Project的，B依赖A，所以A打包生成app-release.aar，然后在B项目中新建Module，并导入AAR的方式，现在这种方式不再支持，只好另寻它路，因为公司内部有Maven仓库，看看能否把AAR上传到仓库中。</p>
+<p>有这样一个开源插件：<a href="https://github.com/dcendents/android-maven-gradle-plugin" target="_blank" rel="external">android-maven-gradle-plugin</a></p>
+<blockquote>
+<p>Root Project build.gradle: classpath ‘com.github.dcendents:android-maven-gradle-plugin:2.0’<br>Module build.gradle: apply plugin: ‘com.github.dcendents.android-maven’</p>
+</blockquote>
+<p>添加task：</p>
+<pre><code>uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: &quot;http://maven.xxx.com/nexus/content/repositories/snapshots/&quot;) {
+                authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
+            }
+            pom.artifactId = &apos;gate2-connector-android&apos;
+            pom.version = &apos;1.0-SNAPSHOT&apos;
+        }
+    }
+}
+</code></pre><p>这里又遇到2个坑：</p>
+<ul>
+<li>报401授权失败，找了半天，结果发现是userName和password传的不对，先把这里两个参数打印出来看看，是否加过密等；</li>
+<li>报400 Bad，后面原因是仓库地址一定要设为hosted类型；<br>这两个错误的更多介绍请参考：<a href="http://www.cnblogs.com/chowmin/articles/3930277.html" target="_blank" rel="external">40X 1</a>、<a href="https://www.cnblogs.com/fengpingfan/p/5197608.html" target="_blank" rel="external">40X 2</a><br>上传成功后，仓库就能看到，此问题也最终搞定，再另外一个项目中按正常依赖就行。<br><img src="https://i.imgur.com/w1L3HuC.png" alt=""><br>#0x3.将相应类打包成Jar<br>这里不得不吐槽一下那帮端上开发的，还在用Eclipse，对他们提供的SDK只能用Jar包的方式。<br>这里只要将所有依赖的classes.jar拷贝到一起，然后用ProGuardTask输出一个文件的方式，暂时还没找到更好的办法。</li>
+</ul>
 
       
 
@@ -245,24 +296,13 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Android,Nexus,Root</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Android-Gradle-Plugin-3.0.1, Android-Studio-3.0.1, JDK-1.8</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Android/" class="article-tag-list-link color3">Android</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -312,7 +352,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://lbrant.github.io/2016/08/18/Nexus-5X-Root续/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://lbrant.github.io/2018/01/04/Update-android-gradle-plugin-3-0-1-problems/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -326,18 +366,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/09/22/Android-Studio-Settings-Repository-Plugin-SYNC-failed-problem/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Android Studio Settings Repository Plugin SYNC failed problem
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/08/17/Nexus-5X-Root-教程/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Nexus 5X Root 教程</div>
+    <a href="/2017/01/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -351,7 +382,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Nexus-5X-Root续" data-title="Nexus 5X Root后OTA升级Android Nougat的问题" data-url="https://lbrant.github.io/2016/08/18/Nexus-5X-Root续/"></div>
+	<div class="ds-thread" data-thread-key="Update-android-gradle-plugin-3-0-1-problems" data-title="Update android gradle plugin 3.0.1 problems" data-url="https://lbrant.github.io/2018/01/04/Update-android-gradle-plugin-3-0-1-problems/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
